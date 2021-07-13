@@ -1,3 +1,6 @@
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body
 {
@@ -7,9 +10,55 @@ body
 main{
     display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
 
 }
+label
+{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    background-color: #b9e3fc;
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.nav-links 
+{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    color: black;
+    margin-right: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.nav-links ul li::after
+{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: .2s;
+    background-color: rgb(241, 119, 62);
+}
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+
+
 .section-title
 {
     color: #F62EFF;
@@ -62,13 +111,20 @@ hr{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-row-gap: 26px;
+
 }
+   
 .blog{
     display: flex;
+    text-align: justify;
+    margin-right: 20px;
+    text-align: justify;
+   
 }
 .blog .thumbnail img{
-    width: 177px;
+    width: 150px;
     height: 117px;
+   
 }
 .blog-info
 {
@@ -89,6 +145,19 @@ hr{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column-gap: 24px;
+  
+    
+}
+.course{
+    box-shadow: 3px 3px 3px 3px  gray;
+    border-radius: 10px;
+    height: 85%;
+    width: 90%;
+    padding: 10px 10px 10px 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  
+    
 }
 
 .course .course-banner img
@@ -101,7 +170,6 @@ hr{
 {
     display: flex;
     align-items: center;
-   justify-content: space-between;
 }
 .fa-star.filled
 {
@@ -119,6 +187,17 @@ hr{
 {
     background-color: lightsalmon;
 }
+
+footer
+{
+    height: 50%;
+    width: 52.25%;
+    text-align: center;
+    background-color: #b9e3fc;
+}
+
+
+
 @media only screen and (max-width: 688px)
  {
 
@@ -142,15 +221,39 @@ hr{
     .blog
     {
         flex-direction: column;
+        align-items: center;
+       
     }
     .courses
     {
        
         grid-template-columns: repeat(1,1fr);
+        align-items: center;
+       
     }
     .course
     {
         flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        
+    }
+    nav
+    {
+        width: 100vw;
+        display: block;
+        padding: 10px;
+        margin: 0;
+    }
+    nav ul{
+        width: 100vw;
+        display: block;
+        padding: 0;
+    }
+    nav ul li
+     {
+      text-align: center;
+      margin-bottom: 10px;
     }
 }
 /*tablet devices*/
@@ -161,9 +264,31 @@ hr{
         align-items: center;
     }
     .players, .courses{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
     }
     .blogs{
         grid-template-columns: repeat(1,1fr);
     }
+    .course-banner
+    {
+        margin-left: 20px;
+    }
+    nav
+    {
+        width: 100vw;
+        display: block;
+        padding: 10px;
+        margin: 0;
+    }
+    nav ul{
+        width: 100vw;
+        display: block;
+        padding: 0;
+    }
+    nav ul li
+     {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
 }
